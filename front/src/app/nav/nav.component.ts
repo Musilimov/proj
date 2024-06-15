@@ -10,14 +10,14 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
   authenticated = false;
-
+  message = '';
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     Emitters.authEmitter.subscribe(
       (auth: boolean) => {
         this.authenticated = auth;
-      }
+      },
     );
 
     // Проверка текущего состояния аутентификации при загрузке компонента

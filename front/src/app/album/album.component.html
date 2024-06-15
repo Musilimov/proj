@@ -1,0 +1,45 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<body>-->
+<!--    &lt;!&ndash; Контейнер для полноэкранного фона &ndash;&gt;-->
+<!--    <div class="fullscreen-bg"></div>-->
+
+<!--    &lt;!&ndash; Основное содержимое страницы &ndash;&gt;-->
+<!--    <div class="content">-->
+<!--        <h1>Here you can look at my lifestyle</h1>-->
+<!--    </div>-->
+
+<!--    <h2>Products</h2>-->
+<!--    <div class="wrapper">-->
+<!--        &lt;!&ndash; Пример структуры для одного продукта &ndash;&gt;-->
+<!--        &lt;!&ndash; В реальной реализации *ngFor создаст несколько таких контейнеров &ndash;&gt;-->
+<!--        <div class="container" *ngFor="let product of products">-->
+<!--            <img src="{{ product.image }}" alt="{{ product.name }}">-->
+<!--            <h3>{{ product.name }}</h3>-->
+<!--            <p>{{ product.description }}</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<h2>Products</h2>
+<div class="wrapper">
+  <div class="container" *ngFor="let product of products">
+    <ng-container *ngIf="product.category.name === 'Video'">
+      <!-- Используйте video тег для отображения видео с заданными размерами -->
+      <video width="300" height="300" controls>
+        <source src="{{ product.image }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </ng-container>
+    <ng-container *ngIf="product.category.name !== 'Video'">
+      <!-- Используйте img тег для отображения изображений с заданными размерами -->
+      <img src="{{ product.image }}" alt="{{ product.name }}">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+    </ng-container>
+  </div>
+</div>
+
+

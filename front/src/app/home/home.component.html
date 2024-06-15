@@ -1,1 +1,16 @@
-{{message}}
+<div *ngIf="!nam" class="wrapper">
+  You are not logged in
+</div>
+<div class="container" *ngIf="nam">
+  <body>
+    <div class="fullscreen-bg"></div>
+    <div class="content">
+      <div class="write">
+        <div class="mes">Hi {{message}}</div><h2>Welcome to my webpage</h2>
+        you can show more about me on the top right
+      </div>
+    </div>
+</body>
+
+  </div>
+

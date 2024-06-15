@@ -1,0 +1,56 @@
+/*.mes{*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  align-items: center;*/
+/*}*/
+/*.container{*/
+
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*}*/
+ html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Чтобы предотвратить скроллинг у body */
+        }
+ img{
+   width: 300px;
+   height: 300px;
+ }
+  .fullscreen-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: -1; /* Отправляем фон за основное содержимое */
+        }
+
+        /* Стили для основного контента */
+        .content {
+            position: absolute;
+            top: 56px;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+.mes{
+  color: white;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

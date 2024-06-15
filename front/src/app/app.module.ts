@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { AlbumComponent } from './album/album.component';
+import { AboutComponent } from './about/about.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -16,14 +19,17 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    AlbumComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

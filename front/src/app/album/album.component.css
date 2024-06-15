@@ -1,0 +1,67 @@
+/* Общие стили */
+body {
+    margin-top: 10px;
+  padding-top: 10px;
+  top: 56px;
+    font-family: Arial, sans-serif;
+    /*background-color: #f4f4f4;*/
+  background-color: white;
+}
+
+/* Полноэкранный фон */
+.fullscreen-bg {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Основное содержимое */
+.content {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+/* Стили для секции продуктов */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    /*border-bottom: 1px solid #ddd;*/
+  border-bottom: 1px solid #8f94fb;
+    margin-bottom: 10px;
+}
+
+.container h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.container p {
+    color: #666;
+    font-size: 0.9em;
+}
